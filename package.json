@@ -1,5 +1,5 @@
 {
-  "name": "mauvepigeon",
+  "name": "ssr-react-app",
   "version": "0.0.1",
   "private": true,
   "engines": {
@@ -23,12 +23,12 @@
       "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
     }
   },
-  "description": "TyresOnTheDrive Web Application",
+  "description": "SSR React Web Application",
   "repository": {
-    "url": "git@bitbucket.org:OnTheDriveV2/mauvepigeon.git",
+    "url": "git@github.com:grahamcn/ssr-react-app.git",
     "type": "git"
   },
-  "author": "TOTD <developers@tyresonthedrive.com>",
+  "author": "Graham Neilson <graham.c.neilson@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
