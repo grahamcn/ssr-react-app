@@ -1,4 +1,4 @@
-# SSR Reacty Web Application
+# SSR React Web Application
 
 ## Info
 
