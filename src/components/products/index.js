@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import OtherComnponent from './other-component'
+
 const ProductsComponent = ({ data }) => {
   return (
     <div>
@@ -10,6 +12,7 @@ const ProductsComponent = ({ data }) => {
           <hr />
         </div>
       ))}
+      <OtherComnponent />
     </div>
   )
 }
