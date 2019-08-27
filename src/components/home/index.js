@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Home = ({ data }) => {
+const HomeComponent = ({ data }) => {
   return (
     <article className="home">
       <h1>Home</h1>
@@ -10,8 +10,8 @@ const Home = ({ data }) => {
   )
 }
 
-Home.propTypes = {
+HomeComponent.propTypes = {
   data: PropTypes.string.isRequired,
 }
 
-export default Home
+export default HomeComponent

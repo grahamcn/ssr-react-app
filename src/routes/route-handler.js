@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import usePageData from '../hooks/usePageData'
 import { Loading } from '../utility'
-import { Home, Products, Product, Basket, Checkout, Content } from '../views'
+import { Home, Products, Basket } from '../components'
 
 const RouteHandler = ({ location }) => {
   const { isLoading, pageData } = usePageData(location.pathname)
@@ -12,10 +12,12 @@ const RouteHandler = ({ location }) => {
     return <Loading />
   }
 
-  // simplistically catch an error for now
   if (!pageData.component) {
     return <div>404 / Error</div>
   }
+
+  // eslint-disable-next-line no-console
+  console.log(`rendering... ${pageData.component}`)
 
   let Component
   switch (pageData.component) {
@@ -25,20 +27,11 @@ const RouteHandler = ({ location }) => {
     case 'products':
       Component = Products
       break
-    case 'product':
-      Component = Product
-      break
     case 'basket':
       Component = Basket
       break
-    case 'checkout':
-      Component = Checkout
-      break
-    case 'other':
-      Component = Content
-      break
     default:
-      Component = Content
+      Component = Home
       break
   }
 

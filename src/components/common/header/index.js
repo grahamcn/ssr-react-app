@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BasketSummary from '../basket/basket-summary'
+import BasketSummary from '../../basket/basket-summary'
 import Nav from './nav'
 
 const Header = () => (

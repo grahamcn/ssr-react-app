@@ -9,14 +9,15 @@
   "scripts": {
     "webpack": "webpack",
     "build": "npm run webpack -- --env.mode production",
+    "build:dev": "npm run webpack -- --env.mode development",
     "build:analyze": "npm run build -- --env.presets analyze",
+    "server": "babel-node --presets @babel/preset-env ./server",
+    "start": "npm run build && NODE_ENV=production npm run server",
+    "dev": "npm run build:dev && npm run server",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
     "format:check": "prettier --list-different \"src/**/*.{js,jsx,css,json}\"",
     "lint": "eslint ./",
-    "test": "jest",
-    "server": "babel-node --presets @babel/preset-env ./server",
-    "start": "npm run build && NODE_ENV=production npm run server",
-    "start:dev": "NODE_ENV=development npm run server"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
